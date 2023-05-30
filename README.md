@@ -1,2 +1,3 @@
 # repo-mySamples
-This repo contain some my projects samples by branches and readme-files in the main
+
+This samples is the example of the site-card layout with interactive map on the Contacts page.
