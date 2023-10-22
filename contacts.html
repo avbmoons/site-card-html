@@ -4,219 +4,226 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacts_page</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Contacts</title>
+    <link rel="stylesheet" href="styles/contacts/contacts.css" />
   </head>
   <body>
-    <div class="header header-contacts">
-      <div class="menu menu-contacts">
-        <a href="index.html">
-          <img src="img/logo.png" alt="photo" />
-        </a>
-        <a href="contacts.html">
-          <img src="img/sendvich.svg" alt="photo" />
-        </a>
-      </div>
-      <div class="contacts-title">
-        <div class="contact-title content">
-          <h2 class="head-2 h2-contacts">Contact Us</h2>
-          <p class="parag-contacts">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-      </div>
-      <div class="contacts-content">
-        <div class="contacts-content-info">
-          <img
-            class="contacts-content-img"
-            src="img/contact-us-img.png"
-            alt="photo"
-          />
-          <div class="contacts-item">
-            <h4 class="head-4 h4-cont-item">ADDRESS</h4>
-            <p class="parag parag-cont-item">
-              Id convallis placerat sit sed duis id amet volutpat quam a,
-              pharetra.
-            </p>
-          </div>
-          <div class="contacts-item">
-            <h4 class="head-4 h4-cont-item">PHONE</h4>
-            <ul class="contacts-content-list">
-              <li>
-                <img
-                  src="img/telefonchik.svg"
-                  alt="icon"
-                />&nbsp;+62-812-7313-4321
-              </li>
-              <li>
-                <img
-                  src="img/telefonchik.svg"
-                  alt="icon"
-                />&nbsp;+62-817-000-1234
-              </li>
-            </ul>
-          </div>
-          <div class="contacts-item">
-            <h4 class="head-4 h4-cont-item">ONLINE SERVICE</h4>
-            <ul class="contacts-content-list">
-              <li>
-                <img src="img/globusik.svg" alt="icon" />&nbsp;www.afrianska.com
-              </li>
-              <li>
-                <img
-                  src="img/konvertik.svg"
-                  alt="icon"
-                />&nbsp;hello.afrian@gmail.com
-              </li>
-            </ul>
+    <div class="wrapper">
+      <div class="top">
+        <div class="top-main">
+          <div class="header">
+            <div class="menu">
+              <a href="index.html" target="_blank">
+                <img src="img/logo.png" alt="photo" />
+              </a>
+              <a href="contacts.html">
+                <img class="burger" src="img/sendvich.svg" alt="photo" />
+              </a>
+            </div>
+            <div class="contacts-title">
+              <div class="contact-title content">
+                <h2 class="contacts-title-head-2">Contact Us</h2>
+                <p class="parag-contacts">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="contacts-content-send-form">
-          <h4 class="head-4 h4-send-form">SEND US MESSAGE</h4>
-          <form action>
-            <div class="full-name">
-              <label for="full-name">Full name</label>
-              <br />
-              <input
-                class="field"
-                type="text"
-                id="full-name"
-                placeholder="Your Name"
+        <div class="contacts-content">
+          <div class="contacts-content-box">
+            <div class="contacts-content-info">
+              <img
+                class="contacts-content-img"
+                src="img/contact-us-img.png"
+                alt="photo"
               />
-              <br />
+              <div class="contacts-item">
+                <h4 class="contacts-item-head-4">ADDRESS</h4>
+                <p class="parag parag-cont-item">
+                  Id convallis placerat sit sed duis id amet volutpat quam a,
+                  pharetra.
+                </p>
+              </div>
+              <div class="contacts-item">
+                <h4 class="contacts-item-head-4">PHONE</h4>
+                <ul class="contacts-content-list">
+                  <li class="contacts-content-list-item">
+                    <img
+                      src="img/telefonchik.svg"
+                      alt="icon"
+                    />&nbsp;+7-812-7313-4321
+                  </li>
+                  <li class="contacts-content-list-item">
+                    <img
+                      src="img/telefonchik.svg"
+                      alt="icon"
+                    />&nbsp;+7-817-0001-1234
+                  </li>
+                </ul>
+              </div>
+              <div class="contacts-item">
+                <h4 class="contacts-item-head-4">ONLINE SERVICE</h4>
+                <ul class="contacts-content-list">
+                  <li class="contacts-content-list-item">
+                    <img
+                      src="img/globusik.svg"
+                      alt="icon"
+                    />&nbsp;www.afrianska.com
+                  </li>
+                  <li class="contacts-content-list-item">
+                    <img
+                      src="img/konvertik.svg"
+                      alt="icon"
+                    />&nbsp;hello.afrian@gmail.com
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="e-mail">
-              <label for="e-mail">Email</label>
-              <br /><br />
-              <input
-                class="field"
-                type="email"
-                id="e-mail"
-                placeholder="Your Email"
-              />
-              <br />
+            <div class="contacts-content-send-form">
+              <h4 class="contacts-content-form-h4">SEND US MESSAGE</h4>
+              <form action>
+                <div class="input-field">
+                  <label for="full-name">Full name</label>
+                  <br />
+                  <input type="text" id="full-name" placeholder="Your Name" />
+                  <br />
+                </div>
+                <div class="input-field">
+                  <label for="e-mail">Email</label>
+                  <br /><br />
+                  <input type="email" id="e-mail" placeholder="Your E-mail" />
+                  <br />
+                </div>
+                <div class="message-field">
+                  <label for="message-field">Message</label>
+                  <br />
+                  <textarea
+                    name="#"
+                    id="message"
+                    cols="50"
+                    rows="10"
+                    placeholder="Your Message"
+                  ></textarea>
+                  <br />
+                </div>
+                <button class="send-button" type="submit">SUBMIT</button>
+              </form>
             </div>
-            <div class="message">
-              <label for="message">Message</label>
-              <br />
-              <textarea
-                class="field"
-                name="#"
-                id="message"
-                cols="50"
-                rows="10"
-                placeholder="Your Message"
-              ></textarea>
-              <br />
-            </div>
-            <button class="send-button" type="submit">SUBMIT</button>
-          </form>
+          </div>
         </div>
-      </div>
-      <div class="map">
-        <script
-          type="text/javascript"
-          charset="utf-8"
-          async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5e2f4bba7ba062da358b2b53ea95b0be369e2dd86c9f5d049fec4cc3756f1fd6&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
-        ></script>
+        <div class="map">
+          <script
+            type="text/javascript"
+            charset="utf-8"
+            async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5e2f4bba7ba062da358b2b53ea95b0be369e2dd86c9f5d049fec4cc3756f1fd6&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
+          ></script>
+        </div>
       </div>
       <div class="footer">
         <div class="footer-top">
           <div class="footer-content-box">
-            <h3 class="head-3 h3-footer">Intersted to woek with our team?</h3>
-            <p class="parag parag-footer">
+            <h3 class="h3-footer">Intersted to work with our team?</h3>
+            <p class="parag-footer">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam.
             </p>
           </div>
-          <a href="#" class="footer-button">Let’s Talk</a>
+          <div class="footer-button-box">
+            <a href="#" class="footer-button">Let’s Talk</a>
+          </div>
         </div>
         <hr class="footer-line" />
         <div class="footer-bottom">
-          <div class="footer-list-bloks">
-            <div class="footer-list-card">
-              <ul style="list-style-type: none">
-                <li>
-                  <div class="item">
-                    <img class="logo-2" src="img/logo-2.svg" alt="logo" />
-                    <h4 class="h4-fotter-cont-logo">Afrianska</h4>
-                  </div>
-                </li>
-                <li class="footer-list-item cont">
-                  <div class="item">
-                    <p class="item-left">A.</p>
-                    <p class="item-right">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                  </div>
-                </li>
-                <li class="footer-list-item cont">
-                  <div class="item">
-                    <p class="item-left">T.</p>
-                    <p class="item-right">+62-812-7313-4321</p>
-                  </div>
-                </li>
-                <li class="footer-list-item cont">
-                  <div class="item">
-                    <p class="item-left">E.</p>
-                    <p class="item-right">hello.afrian@gmail.com</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <ul class="footer-list-card">
-              <h4 class="h4-footter-cont">About US</h4>
-              <li class="footer-list-item cont">
+          <div class="footer-bottom-box">
+            <ol class="footer-list-box box-1">
+              <li class="footer-list-item">
+                <img class="logo-2" src="img/logo-2.svg" alt="logo" />
+                <h4 class="logo-2-head">Afrianska</h4>
+              </li>
+              <li class="footer-list-item">
+                <p class="footer-list-item-marker">A.</p>
+                <p class="footer-list-item-text">
+                  Lorem ipsum dolor sit amet,<br />
+                  consectetur adipisicing elit.
+                </p>
+              </li>
+              <li class="footer-list-item">
+                <p class="footer-list-item-marker">T.</p>
+                <p class="footer-list-item-text">+62-812-7313-4321</p>
+              </li>
+              <li class="footer-list-item">
+                <p class="footer-list-item-marker">E.</p>
+                <p class="footer-list-item-text">hello.afrian@gmail.com</p>
+              </li>
+            </ol>
+            <ol class="footer-list-box box-2">
+              <li class="footer-list-item">
+                <!-- <img class="logo-2" src="img/logo-2.svg" alt="logo" /> -->
+                <h4 class="footer-list-item-head">About US</h4>
+              </li>
+              <li class="footer-list-item">
+                <!-- <p class="footer-list-item-marker">A.</p> -->
                 <a href="#" style="color: #fff; text-decoration: none"
                   >About.</a
                 >
               </li>
-              <li class="footer-list-item cont">
+              <li class="footer-list-item">
+                <!-- <p class="footer-list-item-marker">T.</p> -->
                 <a href="#" style="color: #fff; text-decoration: none"
                   >What We Do</a
                 >
               </li>
-              <li class="footer-list-item cont">
+              <li class="footer-list-item">
+                <!-- <p class="footer-list-item-marker">E.</p> -->
                 <a href="#" style="color: #fff; text-decoration: none"
                   >Project</a
                 >
               </li>
-              <li class="footer-list-item cont">
+              <li class="footer-list-item">
+                <!-- <p class="footer-list-item-marker">E.</p> -->
                 <a href="#" style="color: #fff; text-decoration: none"
                   >How It Work With Us</a
                 >
               </li>
-            </ul>
-            <ul class="footer-list-card">
-              <h4 class="h4-footter-cont">Follow US</h4>
-              <li class="footer-list-item cont">
+            </ol>
+            <ol class="footer-list-box box-3">
+              <li class="footer-list-item">
+                <!-- <img class="logo-2" src="img/logo-2.svg" alt="logo" /> -->
+                <h4 class="footer-list-item-head">Follow US</h4>
+              </li>
+              <li class="footer-list-item">
+                <!-- <p class="footer-list-item-marker">A.</p> -->
                 <a href="#" style="color: #fff; text-decoration: none"
                   >Instagram</a
                 >
               </li>
-              <li class="footer-list-item cont">
+              <li class="footer-list-item">
+                <!-- <p class="footer-list-item-marker">T.</p> -->
                 <a href="#" style="color: #fff; text-decoration: none"
                   >Facebook</a
                 >
               </li>
-              <li class="footer-list-item cont">
+              <li class="footer-list-item">
+                <!-- <p class="footer-list-item-marker">E.</p> -->
                 <a href="#" style="color: #fff; text-decoration: none"
                   >LinkedIn</a
                 >
               </li>
-              <li class="footer-list-item cont">
+              <li class="footer-list-item">
+                <!-- <p class="footer-list-item-marker">E.</p> -->
                 <a href="#" style="color: #fff; text-decoration: none"
                   >Youtube</a
                 >
               </li>
-            </ul>
+            </ol>
           </div>
-        </div>
-        <div class="parag p-copy-right">
-          <p>2019 © Afrianska. All rights reserved.</p>
+          <div class="footer-copy-right">
+            <p>2019 © Afrianska. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </div>
