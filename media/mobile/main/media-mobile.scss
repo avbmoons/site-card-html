@@ -1,23 +1,23 @@
-$site-width: 1366px;
-$site-height: 769px;
-$header-width: 1140px;
+$site-width: 376px;
+$site-height: 376px;
+$header-width: 340px;
 $header-height: 48px;
 $menu-height: $header-height;
-$hero-height: 481px;
-$what-we-do-height: 585px;
-$card-width: 358px;
-$card-height: 480px;
-$card-content-width: 283px;
-$card-content-height: 220px;
-$our-project-height: 1123px;
-$projects-height: 480px+417px;
-$project-item-width: 554px;
-$project-item-height: 480px;
-$footer-height: 657px;
-$footer-top-height: 204px;
-$footer-top-content-width: 495px;
-$footer-bottom-height: 48px;
-$block-width: 1140px;
+$hero-height: 376px;
+$card-width: 335px;
+$card-height: 457px;
+$card-content-width: 264px;
+$card-content-height: 225px;
+$what-we-do-height: 3 * ($card-height) + 144px;
+$projects-height: 144px+ (2 * 255px);
+$project-item-width: 343px;
+$project-item-height: 255px;
+$our-project-height: $projects-height;
+$footer-height: 542px;
+$footer-top-height: 180px;
+$footer-top-content-width: 343px;
+$footer-bottom-height: 36px;
+$block-width: 340px;
 $color-dark: #1f3f68;
 $color-light: #5a98d0;
 $color-white: #ffffff;
@@ -36,9 +36,9 @@ $color-footer: #316099;
   box-sizing: border-box;
 }
 @mixin head-1 {
-  font-size: 64px;
-  font-weight: lighter;
-  line-height: 74px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 32px;
   letter-spacing: 4%;
 }
 @mixin head-2 {
@@ -48,10 +48,10 @@ $color-footer: #316099;
   letter-spacing: 4%;
 }
 @mixin head-3 {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 300;
-  line-height: 46px;
-  letter-spacing: 5%;
+  line-height: 24px;
+  letter-spacing: 0%;
 }
 @mixin head-4 {
   font-size: 20px;
@@ -61,15 +61,15 @@ $color-footer: #316099;
 }
 @mixin parag {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 300;
   line-height: 26px;
   letter-spacing: 5%;
 }
 @mixin button {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 26px;
-  letter-spacing: 4%;
+  letter-spacing: 0%;
   text-align: center;
   border-radius: 10px;
   border: none;
@@ -90,19 +90,19 @@ $color-footer: #316099;
   position: relative;
 }
 @mixin project-text {
-  font-size: 28px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 46px;
-  letter-spacing: 5%;
+  line-height: 16px;
+  letter-spacing: 0%;
   color: $color-white;
   position: absolute;
-  top: 32px;
-  left: 32px;
+  top: 26px;
+  left: 16px;
   text-align: left;
 }
 @mixin footer-list-item {
   font-size: 16px;
-  line-height: 26px;
+  line-height: 16px;
   letter-spacing: 5%;
   list-style: none;
   color: $color-white;
@@ -123,11 +123,12 @@ body {
   width: $site-width;
   min-height: $site-height;
   @include flex-vertical();
-  justify-content: start;
+  justify-content: flex-start;
   .top {
     margin: 0 auto;
     width: 100%;
     @include flex-vertical();
+    justify-content: flex-start;
     flex-grow: 1;
     header {
       margin: 0 auto;
@@ -137,7 +138,7 @@ body {
       justify-content: center;
       .menu {
         margin: 0 auto;
-        margin-top: 38px;
+        margin-top: 16px;
         width: $block-width;
         height: $menu-height;
         @include flex-horizontal();
@@ -175,30 +176,32 @@ body {
           @include flex-horizontal();
           &__content {
             margin: 0;
-            margin-top: 103px;
-            width: 504px;
+            margin-top: 28px;
+            width: 343px;
             height: $hero-height;
             @include flex-vertical();
             justify-content: flex-start;
             &__head {
               @include head-1();
-              text-align: left;
+              text-align: center;
               color: $color-dark;
             }
             &__parag {
-              margin-top: 32px;
-              width: 425px;
+              margin-top: 12px;
+              width: 343px;
               @include parag();
-              text-align: left;
+              text-align: center;
               color: $color-dark;
             }
             &__button {
               @include button();
-              margin-top: 71px;
-              padding: 15px 30px;
-              width: 220px;
+              margin-top: 32px;
+              padding: 1px 1px;
+              width: 108px;
+              height: 27px;
               display: inline-block;
               text-decoration: none;
+              align-self: center;
               box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
             }
           }
@@ -210,12 +213,13 @@ body {
             height: $hero-height;
             @include flex-vertical();
             justify-content: center;
+            display: none;
           }
         }
       }
       .what-we-do {
         margin: 0 auto;
-        margin-top: 64px;
+        margin-top: 48px;
         width: 100%;
         min-height: $what-we-do-height;
         @include flex-vertical();
@@ -223,21 +227,24 @@ body {
         .what-we-do-block {
           margin: 0 auto;
           width: $block-width;
-          height: $what-we-do-height;
+          height: auto;
           @include flex-vertical();
-          justify-content: center;
+          justify-content: flex-start;
+          flex-wrap: wrap;
           &__head {
+            margin: 0 auto;
             @include head-3();
             text-align: center;
             color: $color-black;
           }
           &__card-box {
             margin: 0;
-            margin-top: 64px;
-            width: inherit;
-            height: $card-height;
-            @include flex-horizontal();
+            margin-top: 32px;
+            width: $block-width;
+            height: auto;
+            @include flex-vertical();
             &__card {
+              margin-top: 32px;
               @include card();
               &__img {
                 margin-top: 44px;
@@ -256,22 +263,22 @@ body {
               }
               &__head {
                 @include head-4();
-                margin-top: 45px;
-                margin-left: 32px;
+                margin-top: 48px;
+                margin-left: 30px;
                 width: $card-content-width;
                 text-align: left;
                 color: $color-dark;
               }
               &__content {
                 @include parag();
-                margin-top: 14px;
-                margin-left: 32px;
+                margin-top: 13px;
+                margin-left: 30px;
                 width: $card-content-width;
               }
               &__link {
-                margin-top: 30px;
-                margin-left: 32px;
-                margin-bottom: 44px;
+                margin-top: 13px;
+                margin-left: 30px;
+                margin-bottom: 21px;
                 width: $card-content-width;
                 text-decoration-line: none;
               }
@@ -284,15 +291,15 @@ body {
       }
       .our-project {
         margin: 0 auto;
+        margin-top: 64px;
         width: 100%;
-        min-height: $our-project-height;
+        min-height: $project-item-height;
         @include flex-vertical();
         justify-content: center;
         .our-project-block {
           margin: 0 auto;
-          margin-top: 64px;
           width: $block-width;
-          height: $our-project-height;
+          height: auto;
           @include flex-vertical();
           justify-content: center;
           &__head {
@@ -304,29 +311,33 @@ body {
           &__content {
             margin: 0 auto;
             margin-top: 32px;
-            width: 750px;
+            width: $block-width;
             @include parag();
             text-align: center;
             color: $color-black;
           }
           &__box {
             margin: 0;
-            margin-top: 64px;
+            margin-top: 82px;
             width: inherit;
-            min-height: $projects-height;
-            @include flex-horizontal();
-            flex-wrap: wrap;
+            min-height: $project-item-height;
+            @include flex-vertical();
+            justify-content: flex-start;
             &__item {
               @include project-item();
-              margin-top: 32px;
+              margin-top: 16px;
+              width: $block-width;
               &__first {
                 @include project-item();
+                margin-top: 0;
                 width: $block-width;
+                height: 144px;
                 &__text {
                   @include project-text();
-                  font-size: 32px;
-                  top: 64px;
-                  right: 64px;
+                  font-size: 16px;
+                  line-height: 16px;
+                  top: 16px;
+                  right: 16px;
                   text-align: right;
                   z-index: 99;
                 }
@@ -360,10 +371,10 @@ body {
       justify-content: center;
       .footer-top-block {
         margin: 0 auto;
-        margin-top: 91px;
+        margin-top: 18px;
         width: $block-width;
-        height: $footer-top-height;
-        @include flex-horizontal();
+        height: auto;
+        @include flex-vertical();
         &__content {
           margin: 0;
           width: $footer-top-content-width;
@@ -372,32 +383,39 @@ body {
             @include head-3();
             width: 340px;
             color: $color-white;
-            text-align: left;
+            text-align: center;
           }
           &__text {
             @include parag();
+            margin-top: 32px;
             width: 90%;
             opacity: 0.6;
             color: $color-white;
+            text-align: center;
           }
         }
         &__button-box {
           margin: 0;
+          margin-top: 40px;
           width: $footer-top-content-width;
           @include flex-vertical();
           justify-content: center;
           &__button {
             @include button();
-            padding: 15px 80px;
+            padding: 1px 1px;
+            width: 108px;
             display: inline-block;
-            align-self: flex-end;
+            align-self: center;
             border-radius: 0;
             text-decoration-line: none;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 4%;
           }
         }
       }
       .footer-line {
-        margin-top: 96px;
+        margin-top: 40px;
         width: 100%;
         opacity: 0.4;
         color: $color-white;
@@ -411,32 +429,34 @@ body {
       justify-content: center;
       .footer-bottom-block {
         margin: 0 auto;
-        margin-top: 64px;
+        margin-top: 32px;
         width: $block-width;
-        height: $footer-bottom-height;
-        @include flex-horizontal();
+        height: auto;
+        @include flex-vertical();
         &__list-item {
-          margin-right: 32px;
+          margin-right: 0;
+          margin-top: 16px;
           @include footer-list-item();
+          font-weight: 300;
           &__marker {
             padding-left: 0;
           }
           &__text {
-            margin-left: 20px;
-            width: 317px;
+            margin-left: 23px;
+            width: 304px;
           }
         }
-        &__list-item:last-child {
-          margin-right: 0;
+        &__list-item:first-child {
+          margin-top: 0;
         }
       }
       .footer-bottom-copy-right {
         margin: 0 auto;
-        margin-top: 64px;
-        margin-bottom: 64px;
+        margin-top: 32px;
+        margin-bottom: 32px;
         width: $block-width;
         @include parag();
-        text-align: left;
+        text-align: center;
         color: $color-white;
         opacity: 0.4;
       }

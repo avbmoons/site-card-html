@@ -1,23 +1,26 @@
-$site-width: 1366px;
-$site-height: 769px;
-$header-width: 1140px;
+$site-width: 768px;
+$site-height: 768px;
+$header-width: 701px;
 $header-height: 48px;
 $menu-height: $header-height;
-$hero-height: 481px;
-$what-we-do-height: 585px;
-$card-width: 358px;
-$card-height: 480px;
-$card-content-width: 283px;
-$card-content-height: 220px;
-$our-project-height: 1123px;
-$projects-height: 480px+417px;
-$project-item-width: 554px;
-$project-item-height: 480px;
-$footer-height: 657px;
-$footer-top-height: 204px;
-$footer-top-content-width: 495px;
-$footer-bottom-height: 48px;
-$block-width: 1140px;
+$hero-height: 472px;
+
+$card-width: 335px;
+$card-height: 448px;
+$card-content-width: 264px;
+$card-content-height: 205px;
+$what-we-do-height: 3 * ($card-height) + 282px;
+
+$projects-height: 282px+ (2 * 253px);
+$project-item-width: 336px;
+$project-item-height: 253px;
+$our-project-height: $projects-height;
+
+$footer-height: 644px;
+$footer-top-height: 210px;
+$footer-top-content-width: 336px;
+$footer-bottom-height: 21px;
+$block-width: 701px;
 $color-dark: #1f3f68;
 $color-light: #5a98d0;
 $color-white: #ffffff;
@@ -96,8 +99,8 @@ $color-footer: #316099;
   letter-spacing: 5%;
   color: $color-white;
   position: absolute;
-  top: 32px;
-  left: 32px;
+  top: 19px;
+  left: 19px;
   text-align: left;
 }
 @mixin footer-list-item {
@@ -137,7 +140,7 @@ body {
       justify-content: center;
       .menu {
         margin: 0 auto;
-        margin-top: 38px;
+        margin-top: 47px;
         width: $block-width;
         height: $menu-height;
         @include flex-horizontal();
@@ -170,12 +173,14 @@ body {
         );
         .hero-block {
           margin: 0 auto;
+          margin-bottom: 108px;
           width: $block-width;
           height: auto;
           @include flex-horizontal();
+          position: relative;
           &__content {
             margin: 0;
-            margin-top: 103px;
+            margin-top: 112px;
             width: 504px;
             height: $hero-height;
             @include flex-vertical();
@@ -195,7 +200,7 @@ body {
             &__button {
               @include button();
               margin-top: 71px;
-              padding: 15px 30px;
+              padding: 20px 10px;
               width: 220px;
               display: inline-block;
               text-decoration: none;
@@ -204,12 +209,13 @@ body {
           }
           &__illustration {
             margin: 0;
-            margin-top: 107px;
-            margin-bottom: 94px;
-            width: 554px;
-            height: $hero-height;
+            margin-top: 292px;
+            width: 336px;
+            height: 292px;
             @include flex-vertical();
-            justify-content: center;
+            justify-content: flex-end;
+            position: absolute;
+            left: 368px;
           }
         }
       }
@@ -223,21 +229,26 @@ body {
         .what-we-do-block {
           margin: 0 auto;
           width: $block-width;
-          height: $what-we-do-height;
+          height: auto;
           @include flex-vertical();
-          justify-content: center;
+          justify-content: flex-start;
+          flex-wrap: wrap;
           &__head {
+            margin: 0 auto;
+            width: 90%;
             @include head-3();
             text-align: center;
             color: $color-black;
           }
           &__card-box {
             margin: 0;
-            margin-top: 64px;
-            width: inherit;
-            height: $card-height;
-            @include flex-horizontal();
+            margin-top: 32px;
+            width: $block-width;
+            height: auto;
+            @include flex-vertical();
             &__card {
+              margin: 0 auto;
+              margin-top: 32px;
               @include card();
               &__img {
                 margin-top: 44px;
@@ -256,22 +267,22 @@ body {
               }
               &__head {
                 @include head-4();
-                margin-top: 45px;
-                margin-left: 32px;
+                margin-top: 48px;
+                margin-left: 30px;
                 width: $card-content-width;
                 text-align: left;
                 color: $color-dark;
               }
               &__content {
                 @include parag();
-                margin-top: 14px;
-                margin-left: 32px;
+                margin-top: 13px;
+                margin-left: 30px;
                 width: $card-content-width;
               }
               &__link {
                 margin-top: 30px;
                 margin-left: 32px;
-                margin-bottom: 44px;
+                margin-bottom: 41px;
                 width: $card-content-width;
                 text-decoration-line: none;
               }
@@ -284,15 +295,15 @@ body {
       }
       .our-project {
         margin: 0 auto;
+        margin-top: 127px;
         width: 100%;
         min-height: $our-project-height;
         @include flex-vertical();
         justify-content: center;
         .our-project-block {
           margin: 0 auto;
-          margin-top: 64px;
           width: $block-width;
-          height: $our-project-height;
+          height: auto;
           @include flex-vertical();
           justify-content: center;
           &__head {
@@ -304,7 +315,7 @@ body {
           &__content {
             margin: 0 auto;
             margin-top: 32px;
-            width: 750px;
+            width: $block-width;
             @include parag();
             text-align: center;
             color: $color-black;
@@ -313,7 +324,7 @@ body {
             margin: 0;
             margin-top: 64px;
             width: inherit;
-            min-height: $projects-height;
+            min-height: $project-item-height;
             @include flex-horizontal();
             flex-wrap: wrap;
             &__item {
@@ -322,6 +333,7 @@ body {
               &__first {
                 @include project-item();
                 width: $block-width;
+                height: 297px;
                 &__text {
                   @include project-text();
                   font-size: 32px;
@@ -346,7 +358,7 @@ body {
   }
   footer {
     margin: 0 auto;
-    margin-top: 112px;
+    margin-top: 109px;
     width: 100%;
     min-height: $footer-height;
     @include flex-vertical();
@@ -360,35 +372,44 @@ body {
       justify-content: center;
       .footer-top-block {
         margin: 0 auto;
-        margin-top: 91px;
-        width: $block-width;
+        margin-top: 47px;
+        width: 100%;
         height: $footer-top-height;
         @include flex-horizontal();
         &__content {
           margin: 0;
+          margin-left: 124px;
           width: $footer-top-content-width;
+          height: 210px;
           @include flex-vertical();
           &__head {
             @include head-3();
-            width: 340px;
+            width: 336px;
+            height: 82px;
             color: $color-white;
             text-align: left;
           }
           &__text {
             @include parag();
+            margin-top: 32px;
             width: 90%;
+            height: 96px;
             opacity: 0.6;
             color: $color-white;
+            text-align: left;
           }
         }
         &__button-box {
           margin: 0;
+          margin-right: 124px;
           width: $footer-top-content-width;
           @include flex-vertical();
           justify-content: center;
           &__button {
             @include button();
-            padding: 15px 80px;
+            padding: 3px 1px;
+            width: 133px;
+            height: 31px;
             display: inline-block;
             align-self: flex-end;
             border-radius: 0;
@@ -397,7 +418,7 @@ body {
         }
       }
       .footer-line {
-        margin-top: 96px;
+        margin-top: 64px;
         width: 100%;
         opacity: 0.4;
         color: $color-white;
@@ -412,29 +433,33 @@ body {
       .footer-bottom-block {
         margin: 0 auto;
         margin-top: 64px;
-        width: $block-width;
-        height: $footer-bottom-height;
-        @include flex-horizontal();
+        margin-left: 124px;
+        width: 515px;
+        height: auto;
+        @include flex-vertical();
         &__list-item {
-          margin-right: 32px;
+          margin-top: 25px;
           @include footer-list-item();
+          font-weight: 300;
           &__marker {
             padding-left: 0;
           }
           &__text {
-            margin-left: 20px;
-            width: 317px;
+            margin-left: 37px;
+            width: 455px;
           }
         }
-        &__list-item:last-child {
+        &__list-item:first-child {
           margin-right: 0;
+          margin-top: 0;
         }
       }
       .footer-bottom-copy-right {
         margin: 0 auto;
         margin-top: 64px;
         margin-bottom: 64px;
-        width: $block-width;
+        margin-left: 124px;
+        width: 100%;
         @include parag();
         text-align: left;
         color: $color-white;

@@ -2,177 +2,226 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main_page</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="styles/main/main.css" />
+    <link
+      rel="stylesheet"
+      media="only screen and (max-width:376px)"
+      href="media/mobile/main/media-mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      media="only screen and (min-width:377px) and (max-width:768px)"
+      href="media/tablet/main/media-tablet.css"
+    />
   </head>
   <body>
     <div class="wrapper">
       <div class="top">
-        <div class="top-main">
-          <div class="header">
-            <div class="menu">
+        <header>
+          <div class="menu">
+            <div class="menu__home">
               <a href="index.html">
-                <img src="img/logo.png" alt="photo" />
+                <img src="img/logo.png" alt="logo" />
               </a>
-              <a href="contacts.html" target="_blank">
-                <img src="img/address-book-solid 1.png" alt="photo" />
+            </div>
+            <div class="menu__contacts">
+              <a href="contacts.html">
+                <img src="img/address-book-solid 1.png" alt="contacts" />
               </a>
             </div>
           </div>
-          <div class="hero">
+        </header>
+        <main>
+          <section class="hero">
             <div class="hero-block">
-              <div class="hero-content">
-                <h1 class="hero-content-head">New Automation Tool for Your</h1>
-                <p class="hero-content-parag">
+              <div class="hero-block__content">
+                <p class="hero-block__content__head">
+                  New Automation Tool for Your
+                </p>
+                <p class="hero-block__content__parag">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Faucibus tristique vulputate ultrices ut mauris tellus at.
                   Posuere sollicitudin odio tellus elit.
                 </p>
-                <a href="#from-button" class="hero-button">See Our Project</a>
+                <a href="#to-project" class="hero-block__content__button"
+                  >See Our Project</a
+                >
               </div>
-              <div class="hero-illustration">
+              <div class="hero-block__illustration">
                 <img src="img/illustration.png" alt="picture" />
               </div>
-              <!-- <a href="#" class="hero-button">See Our Project</a> -->
             </div>
-          </div>
-        </div>
-        <div class="what-we-do">
-          <h3 class="what-we-do-head-3">
-            <a name="from-button"></a>
-            What we do to help our client grow in digital era
-          </h3>
-          <div class="card-box">
-            <div class="card">
-              <div class="card-content">
-                <div class="card-img">
-                  <img class="img1" src="img/what-we-do-img1.png" alt="photo" />
+          </section>
+          <section class="what-we-do">
+            <div class="what-we-do-block">
+              <p class="what-we-do-block__head">
+                <a name="to-project"></a>
+                What we do to help our client grow in digital era
+              </p>
+              <div class="what-we-do-block__card-box">
+                <div class="what-we-do-block__card-box__card">
+                  <div class="what-we-do-block__card-box__card__img">
+                    <img
+                      class="what-we-do-block__card-box__card__img__img1"
+                      src="img/what-we-do-img1.png"
+                      alt="photo"
+                    />
+                  </div>
+                  <p class="what-we-do-block__card-box__card__head">
+                    Make Your business To Be Better Famous In Internet
+                  </p>
+                  <p class="what-we-do-block__card-box__card__content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                  <a class="what-we-do-block__card-box__card__link" href="#"
+                    >Learn more&nbsp;</a
+                  >
                 </div>
-
-                <h4 class="card-head-4">
-                  Make Your business To Be Better Famous In Internet
-                </h4>
-                <p class="card-parag">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-              <a href="#" class="card-link">Learn more&nbsp;</a>
-            </div>
-            <div class="card">
-              <div class="card-content">
-                <div class="card-img">
-                  <img class="img1" src="img/what-we-do-img2.png" alt="photo" />
-                  <img class="img2" src="img/Group4.png" alt="photo2" />
+                <div class="what-we-do-block__card-box__card">
+                  <div class="what-we-do-block__card-box__card__img">
+                    <img
+                      class="what-we-do-block__card-box__card__img__img1"
+                      src="img/what-we-do-img2.png"
+                      alt="photo"
+                    />
+                    <img
+                      class="what-we-do-block__card-box__card__img__img2"
+                      src="img/Group4.png"
+                      alt="photo2"
+                    />
+                  </div>
+                  <p class="what-we-do-block__card-box__card__head">
+                    Bring Technology To Your Comfrotable Home
+                  </p>
+                  <p class="what-we-do-block__card-box__card__content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                  <a href="#" class="what-we-do-block__card-box__card__link"
+                    >Learn more&nbsp;</a
+                  >
                 </div>
-
-                <h4 class="card-head-4">
-                  Bring Technology To Your Comfrotable Home
-                </h4>
-                <p class="card-parag">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-              <a href="#" class="card-link">Learn more&nbsp;</a>
-            </div>
-            <div class="card">
-              <div class="card-content">
-                <div class="card-img">
-                  <img class="img1" src="img/what-we-do-img3.png" alt="photo" />
+                <div class="what-we-do-block__card-box__card">
+                  <div class="what-we-do-block__card-box__card__img">
+                    <img
+                      class="what-we-do-block__card-box__card__img__img1"
+                      src="img/what-we-do-img3.png"
+                      alt="photo"
+                    />
+                  </div>
+                  <p class="what-we-do-block__card-box__card__head">
+                    Build Your Digital Product That Suitable For Your Neede
+                  </p>
+                  <p class="what-we-do-block__card-box__card__content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                  <a href="#" class="what-we-do-block__card-box__card__link">
+                    Learn more&nbsp;
+                  </a>
                 </div>
-
-                <h4 class="card-head-4">
-                  Build Your Digital Product That Suitable For Your Neede
-                </h4>
-                <p class="card-parag">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-              <a href="#" class="card-link">Learn more&nbsp;</a>
-            </div>
-          </div>
-        </div>
-        <div class="our-project">
-          <div class="our-project-content-box">
-            <h3 class="our-project-head-3">Our Finished Project</h3>
-            <p class="our-project-parag">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
-          </div>
-          <div class="our-project-block">
-            <div class="project-item">
-              <img
-                class="project-img"
-                src="img/our-project-img1.png"
-                alt="photo"
-              />
-              <p class="project-text">Smart Home Installation</p>
-            </div>
-            <div class="project-item-box">
-              <div class="project-item project-item-margin">
-                <img
-                  class="project-img"
-                  src="img/our-project-img2.png"
-                  alt="photo"
-                />
-                <p class="project-text-2">Sparklite App</p>
-              </div>
-              <div class="project-item">
-                <img
-                  class="project-img"
-                  src="img/our-project-img3.png"
-                  alt="photo"
-                />
-                <p class="project-text-2">Car-Rapetition App</p>
               </div>
             </div>
-          </div>
-        </div>
+          </section>
+          <section class="our-project">
+            <div class="our-project-block">
+              <p class="our-project-block__head">Our Finished Project</p>
+              <p class="our-project-block__content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
+              <div class="our-project-block__box">
+                <div class="our-project-block__box__item__first">
+                  <img
+                    class="our-project-block__box__item__img"
+                    src="img/our-project-img1.png"
+                    alt="photo"
+                  />
+                  <p class="our-project-block__box__item__first__text">
+                    Smart Home Installation
+                  </p>
+                </div>
+                <div class="our-project-block__box__item">
+                  <img
+                    class="our-project-block__box__item__img"
+                    src="img/our-project-img2.png"
+                    alt="photo"
+                  />
+                  <p class="our-project-block__box__item__text">
+                    Sparklite App
+                  </p>
+                </div>
+                <div class="our-project-block__box__item">
+                  <img
+                    class="our-project-block__box__item__img"
+                    src="img/our-project-img3.png"
+                    alt="photo"
+                  />
+                  <p class="our-project-block__box__item__text">
+                    Car-Rapetition App
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
-      <div class="footer">
+      <footer>
         <div class="footer-top">
-          <div class="footer-content-box">
-            <h3 class="h3-footer">Intersted to work with our team?</h3>
-            <p class="parag-footer">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
+          <div class="footer-top-block">
+            <div class="footer-top-block__content">
+              <p class="footer-top-block__content__head">
+                Intersted to work with our team?
+              </p>
+              <p class="footer-top-block__content__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
+            </div>
+            <div class="footer-top-block__button-box">
+              <a href="#to-project" class="footer-top-block__button-box__button"
+                >Let's Talk</a
+              >
+            </div>
           </div>
-          <div class="footer-button-box">
-            <a href="#" class="footer-button">Let’s Talk</a>
+          <div>
+            <hr class="footer-line" />
           </div>
         </div>
-        <hr class="footer-line" />
         <div class="footer-bottom">
-          <ol class="footer-list-box">
-            <li class="footer-list-item">
-              <p class="footer-list-item-marker">A.</p>
-              <p class="footer-list-item-text">
-                Lorem ipsum dolor sit amet,<br />
-                consectetur adipisicing elit.
+          <div class="footer-bottom-block">
+            <li class="footer-bottom-block__list-item">
+              <p class="footer-bottom-block__list-item__marker">A.</p>
+              <p class="footer-bottom-block__list-item__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               </p>
             </li>
-            <li class="footer-list-item">
-              <p class="footer-list-item-marker">T.</p>
-              <p class="footer-list-item-text">+7-812-7313-4321</p>
+            <li class="footer-bottom-block__list-item">
+              <p class="footer-bottom-block__list-item__marker">T.</p>
+              <p class="footer-bottom-block__list-item__text">
+                +7-812-7313-4321
+              </p>
             </li>
-            <li class="footer-list-item">
-              <p class="footer-list-item-marker">E.</p>
-              <p class="footer-list-item-text">hello.afrian@gmail.com</p>
+            <li class="footer-bottom-block__list-item">
+              <p class="footer-bottom-block__list-item__marker">E.</p>
+              <p class="footer-bottom-block__list-item__text">
+                hello.afrian@gmail.com
+              </p>
             </li>
-          </ol>
-          <div class="footer-copy-right">
+          </div>
+          <div class="footer-bottom-copy-right">
             <p>2019 © Afrianska. All rights reserved.</p>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   </body>
 </html>
