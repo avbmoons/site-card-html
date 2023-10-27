@@ -123,6 +123,7 @@ body {
 }
 
 .wrapper {
+  margin: 0 auto;
   width: $site-width;
   min-height: $site-height;
   @include flex-vertical();

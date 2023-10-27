@@ -10,6 +10,7 @@ body {
 }
 
 .wrapper {
+  margin: 0 auto;
   width: 1366px;
   min-height: 769px;
   display: flex;

@@ -42,9 +42,9 @@ $color-footer: #316099;
   letter-spacing: 4%;
 }
 @mixin head-2 {
-  font-size: 44px;
+  font-size: 24px;
   font-weight: 500;
-  line-height: 74px;
+  line-height: 24px;
   letter-spacing: 4%;
 }
 @mixin head-3 {
@@ -120,6 +120,7 @@ body {
 }
 
 .wrapper {
+  margin: 0 auto;
   width: $site-width;
   min-height: $site-height;
   @include flex-vertical();

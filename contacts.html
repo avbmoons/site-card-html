@@ -6,99 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacts</title>
     <link rel="stylesheet" href="styles/contacts/contacts.css" />
+    <link rel="stylesheet" href="styles/contacts/contacts.css" />
+    <link
+      rel="stylesheet"
+      media="only screen and (max-width:376px)"
+      href="media/mobile/contacts/media-mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      media="only screen and (min-width:377px) and (max-width:768px)"
+      href="media/tablet/contacts/media-tablet.css"
+    />
   </head>
   <body>
     <div class="wrapper">
       <div class="top">
         <div class="top-main">
-          <div class="header">
+          <header>
             <div class="menu">
-              <a href="index.html" target="_blank">
-                <img src="img/logo.png" alt="photo" />
-              </a>
-              <a href="contacts.html">
-                <img class="burger" src="img/sendvich.svg" alt="photo" />
-              </a>
-            </div>
-            <div class="contacts-title">
-              <div class="contact-title content">
-                <h2 class="contacts-title-head-2">Contact Us</h2>
-                <p class="parag-contacts">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+              <div class="menu__home">
+                <a href="index.html">
+                  <img src="img/logo.png" alt="logo" />
+                </a>
+              </div>
+              <div class="menu__contacts">
+                <a href="contacts.html">
+                  <img src="img/address-book-solid 1.png" alt="contacts" />
+                </a>
               </div>
             </div>
-          </div>
+            <div class="title">
+              <p class="title__head">Contact Us</p>
+              <p class="title__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </header>
         </div>
-        <div class="contacts-content">
-          <div class="contacts-content-box">
-            <div class="contacts-content-info">
+        <section class="contacts">
+          <div class="contacts-block">
+            <div class="contacts-block__info">
               <img
-                class="contacts-content-img"
+                class="contacts-block__img"
                 src="img/contact-us-img.png"
                 alt="photo"
               />
               <div class="contacts-item">
-                <h4 class="contacts-item-head-4">ADDRESS</h4>
-                <p class="parag parag-cont-item">
+                <p class="contacts-item__head">ADDRESS</p>
+                <p class="contacts-item__text">
                   Id convallis placerat sit sed duis id amet volutpat quam a,
                   pharetra.
                 </p>
               </div>
               <div class="contacts-item">
-                <h4 class="contacts-item-head-4">PHONE</h4>
-                <ul class="contacts-content-list">
-                  <li class="contacts-content-list-item">
+                <h4 class="contacts-item__head">PHONE</h4>
+                <ul class="contacts-item__list">
+                  <li class="contacts-item__list__item">
                     <img
                       src="img/telefonchik.svg"
                       alt="icon"
-                    />&nbsp;+7-812-7313-4321
+                    />&nbsp;&nbsp;+7-812-7313-4321
                   </li>
-                  <li class="contacts-content-list-item">
+                  <li class="contacts-item__list__item">
                     <img
                       src="img/telefonchik.svg"
                       alt="icon"
-                    />&nbsp;+7-817-0001-1234
+                    />&nbsp;&nbsp;+7-817-0001-1234
                   </li>
                 </ul>
               </div>
               <div class="contacts-item">
-                <h4 class="contacts-item-head-4">ONLINE SERVICE</h4>
-                <ul class="contacts-content-list">
-                  <li class="contacts-content-list-item">
+                <h4 class="contacts-item__head">ONLINE SERVICE</h4>
+                <ul class="contacts-item__list">
+                  <li class="contacts-item__list__item">
                     <img
                       src="img/globusik.svg"
                       alt="icon"
-                    />&nbsp;www.afrianska.com
+                    />&nbsp;&nbsp;www.afrianska.com
                   </li>
-                  <li class="contacts-content-list-item">
+                  <li class="contacts-item__list__item">
                     <img
                       src="img/konvertik.svg"
                       alt="icon"
-                    />&nbsp;hello.afrian@gmail.com
+                    />&nbsp;&nbsp;hello.afrian@gmail.com
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="contacts-content-send-form">
-              <h4 class="contacts-content-form-h4">SEND US MESSAGE</h4>
-              <form action>
-                <div class="input-field">
+            <div class="contacts-block__send-form">
+              <p class="contacts-block__send-form__head">SEND US MESSAGE</p>
+              <form class="contacts-block__send-form__form" action>
+                <div class="contacts-block__send-form__form__input-field">
                   <label for="full-name">Full name</label>
-                  <br />
+                  <!-- <br /> -->
                   <input type="text" id="full-name" placeholder="Your Name" />
-                  <br />
+                  <!-- <br /> -->
                 </div>
-                <div class="input-field">
+                <div class="contacts-block__send-form__form__input-field">
                   <label for="e-mail">Email</label>
-                  <br /><br />
+                  <!-- <br /><br /> -->
                   <input type="email" id="e-mail" placeholder="Your E-mail" />
-                  <br />
+                  <!-- <br /> -->
                 </div>
-                <div class="message-field">
+                <div class="contacts-block__send-form__form__message-field">
                   <label for="message-field">Message</label>
-                  <br />
+                  <!-- <br /> -->
                   <textarea
                     name="#"
                     id="message"
@@ -106,116 +119,149 @@
                     rows="10"
                     placeholder="Your Message"
                   ></textarea>
-                  <br />
+                  <!-- <br /> -->
                 </div>
                 <button class="send-button" type="submit">SUBMIT</button>
               </form>
             </div>
           </div>
-        </div>
-        <div class="map">
+        </section>
+        <section class="map">
           <script
             type="text/javascript"
             charset="utf-8"
             async
             src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5e2f4bba7ba062da358b2b53ea95b0be369e2dd86c9f5d049fec4cc3756f1fd6&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
           ></script>
-        </div>
+        </section>
       </div>
-      <div class="footer">
+      <footer class="footer">
         <div class="footer-top">
-          <div class="footer-content-box">
-            <h3 class="h3-footer">Intersted to work with our team?</h3>
-            <p class="parag-footer">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
+          <div class="footer-top-block">
+            <div class="footer-top-block__content">
+              <p class="footer-top-block__content__head">
+                Intersted to work with our team?
+              </p>
+              <p class="footer-top-block__content__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
+            </div>
+            <div class="footer-top-block__button-box">
+              <a href="#to-project" class="footer-top-block__button-box__button"
+                >Let's Talk</a
+              >
+            </div>
           </div>
-          <div class="footer-button-box">
-            <a href="#" class="footer-button">Let’s Talk</a>
+          <div>
+            <hr class="footer-line" />
           </div>
         </div>
-        <hr class="footer-line" />
         <div class="footer-bottom">
-          <div class="footer-bottom-box">
-            <ol class="footer-list-box box-1">
-              <li class="footer-list-item">
-                <img class="logo-2" src="img/logo-2.svg" alt="logo" />
-                <h4 class="logo-2-head">Afrianska</h4>
-              </li>
-              <li class="footer-list-item">
-                <p class="footer-list-item-marker">A.</p>
-                <p class="footer-list-item-text">
-                  Lorem ipsum dolor sit amet,<br />
-                  consectetur adipisicing elit.
+          <div class="footer-bottom-block">
+            <ol class="footer-bottom-block__list-box box-1">
+              <li class="footer-bottom-block__list-box__list-item">
+                <img
+                  class="footer-bottom-block__list-box__list-item__logo-2"
+                  src="img/logo-2.svg"
+                  alt="logo"
+                />
+                <p class="footer-bottom-block__list-box__list-item__head">
+                  Afrianska
                 </p>
               </li>
-              <li class="footer-list-item">
-                <p class="footer-list-item-marker">T.</p>
-                <p class="footer-list-item-text">+62-812-7313-4321</p>
+              <li class="footer-bottom-block__list-box__list-item">
+                <p class="footer-bottom-block__list-box__list-item__marker">
+                  A.
+                </p>
+                <p class="footer-bottom-block__list-box__list-item__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
               </li>
-              <li class="footer-list-item">
-                <p class="footer-list-item-marker">E.</p>
-                <p class="footer-list-item-text">hello.afrian@gmail.com</p>
+              <li class="footer-bottom-block__list-box__list-item">
+                <p class="footer-bottom-block__list-box__list-item__marker">
+                  T.
+                </p>
+                <p class="footer-bottom-block__list-box__list-item__text">
+                  +62-812-7313-4321
+                </p>
+              </li>
+              <li class="footer-bottom-block__list-box__list-item">
+                <p class="footer-bottom-block__list-box__list-item__marker">
+                  E.
+                </p>
+                <p class="footer-bottom-block__list-box__list-item__text">
+                  hello.afrian@gmail.com
+                </p>
               </li>
             </ol>
-            <ol class="footer-list-box box-2">
-              <li class="footer-list-item">
-                <!-- <img class="logo-2" src="img/logo-2.svg" alt="logo" /> -->
-                <h4 class="footer-list-item-head">About US</h4>
+            <ol class="footer-bottom-block__list-box box-2">
+              <li class="footer-bottom-block__list-box__list-item">
+                <p class="footer-bottom-block__list-box__list-item__head4">
+                  About US
+                </p>
               </li>
-              <li class="footer-list-item">
-                <!-- <p class="footer-list-item-marker">A.</p> -->
-                <a href="#" style="color: #fff; text-decoration: none"
+              <li class="footer-bottom-block__list-box__list-item">
+                <a
+                  class="footer-bottom-block__list-box__list-item__link"
+                  href="#"
                   >About.</a
                 >
               </li>
-              <li class="footer-list-item">
-                <!-- <p class="footer-list-item-marker">T.</p> -->
-                <a href="#" style="color: #fff; text-decoration: none"
+              <li class="footer-bottom-block__list-box__list-item">
+                <a
+                  class="footer-bottom-block__list-box__list-item__link"
+                  href="#"
                   >What We Do</a
                 >
               </li>
-              <li class="footer-list-item">
-                <!-- <p class="footer-list-item-marker">E.</p> -->
-                <a href="#" style="color: #fff; text-decoration: none"
+              <li class="footer-bottom-block__list-box__list-item">
+                <a
+                  class="footer-bottom-block__list-box__list-item__link"
+                  href="#"
                   >Project</a
                 >
               </li>
-              <li class="footer-list-item">
-                <!-- <p class="footer-list-item-marker">E.</p> -->
-                <a href="#" style="color: #fff; text-decoration: none"
+              <li class="footer-bottom-block__list-box__list-item">
+                <a
+                  class="footer-bottom-block__list-box__list-item__link"
+                  href="#"
                   >How It Work With Us</a
                 >
               </li>
             </ol>
-            <ol class="footer-list-box box-3">
-              <li class="footer-list-item">
-                <!-- <img class="logo-2" src="img/logo-2.svg" alt="logo" /> -->
-                <h4 class="footer-list-item-head">Follow US</h4>
+            <ol class="footer-bottom-block__list-box box-3">
+              <li class="footer-bottom-block__list-box__list-item">
+                <p class="footer-bottom-block__list-box__list-item__head4">
+                  Follow US
+                </p>
               </li>
-              <li class="footer-list-item">
-                <!-- <p class="footer-list-item-marker">A.</p> -->
-                <a href="#" style="color: #fff; text-decoration: none"
+              <li class="footer-bottom-block__list-box__list-item">
+                <a
+                  class="footer-bottom-block__list-box__list-item__link"
+                  href="#"
                   >Instagram</a
                 >
               </li>
-              <li class="footer-list-item">
-                <!-- <p class="footer-list-item-marker">T.</p> -->
-                <a href="#" style="color: #fff; text-decoration: none"
+              <li class="footer-bottom-block__list-box__list-item">
+                <a
+                  class="footer-bottom-block__list-box__list-item__link"
+                  href="#"
                   >Facebook</a
                 >
               </li>
-              <li class="footer-list-item">
-                <!-- <p class="footer-list-item-marker">E.</p> -->
-                <a href="#" style="color: #fff; text-decoration: none"
+              <li class="footer-bottom-block__list-box__list-item">
+                <a
+                  class="footer-bottom-block__list-box__list-item__link"
+                  href="#"
                   >LinkedIn</a
                 >
               </li>
-              <li class="footer-list-item">
-                <!-- <p class="footer-list-item-marker">E.</p> -->
-                <a href="#" style="color: #fff; text-decoration: none"
+              <li class="footer-bottom-block__list-box__list-item">
+                <a
+                  class="footer-bottom-block__list-box__list-item__link"
+                  href="#"
                   >Youtube</a
                 >
               </li>
@@ -225,7 +271,7 @@
             <p>2019 © Afrianska. All rights reserved.</p>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   </body>
 </html>
